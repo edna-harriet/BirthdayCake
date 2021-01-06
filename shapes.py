@@ -1,9 +1,14 @@
-#This is a custom module we've made.
-#modules are files full of code that you can import into your programs.
+
 #this one teaches our turtle to draw various shapes.
 
 import turtle
 import math
+
+
+from tkinter import *
+from PIL import Image, ImageTk # Pillow library is for loading images.
+import random
+
 
 def draw_circle(turtle, color,x,y,radius):
     turtle.penup()
@@ -14,7 +19,7 @@ def draw_circle(turtle, color,x,y,radius):
     turtle.circle(radius)
     turtle.end_fill()
 
-def draw_triangle(turtle, color, x, y, size):
+'''def draw_triangle(turtle, color, x, y, size):
     turtle.penup()
     turtle.color(color)
     turtle.fillcolor(color)
@@ -26,7 +31,7 @@ def draw_triangle(turtle, color, x, y, size):
         turtle.left(120)
     turtle.end_fill()
     turtle.setheading(0)
-
+'''
 def draw_square(turtle, color,x,y,size):
     turtle.penup()
     turtle.color(color)
@@ -57,7 +62,7 @@ def draw_rectangle(turtle, color,x,y,width,height):
     turtle.setheading(0)
     turtle.getscreen().update()
 
-def draw_star(turtle, color, x, y, size):
+'''def draw_star(turtle, color, x, y, size):
     turtle.penup()
     turtle.color(color)
     turtle.fillcolor(color)
@@ -73,15 +78,11 @@ def draw_star(turtle, color, x, y, size):
     turtle.end_fill()
     turtle.setheading(0)
     turtle.getscreen().update()
-
+'''
 def addVanilla(turtle,color,x,y,radius):
     draw_circle(turtle,color,x,y,radius)
     turtle.getscreen().update()
 
-'''def addBalloon(turtle,color,x,y,radius):
-    draw_circle(turtle,color,x,y,radius)
-    turtle.getscreen().update()
-'''
 
 def addEggs(turtle,color,y):
     turtle.penup()
@@ -93,10 +94,8 @@ def addEggs(turtle,color,y):
 
     for x in range(-70,70):
         turtle.goto(x,y-15-15*math.cos((x/100)*2*math.pi))
-        #turtle.goto(x,y-5-5*math.cos((x / 100)*2*math.pi))
 
-    #turtle.goto(50,y+10)
-    #turtle.goto(-50,y+10)
+
     turtle.goto(70,y+10)
     turtle.goto(-70,y+10)
     turtle.end_fill()
@@ -117,6 +116,9 @@ def addCream_milk(turtle,color,y):
     turtle.goto(50, y+10)
     turtle.goto(-50, y+10)
     turtle.end_fill()
+
     turtle.getscreen().update()
+
+
 
 
